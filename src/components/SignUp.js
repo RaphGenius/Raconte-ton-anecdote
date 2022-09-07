@@ -22,6 +22,7 @@ export default function SignUp() {
             displayName,
           });
           console.log(userAuth);
+          window.location.reload();
         })
         .catch();
     } catch (err) {
@@ -40,18 +41,21 @@ export default function SignUp() {
             placeholder="Pseudo"
             required
             onChange={(e) => setDisplayName(e.target.value)}
+            autoComplete="off"
           />
           <input
             type="email"
             placeholder="Email"
             required
             ref={registerEmail}
+            autoComplete="off"
           />
           <input
             type="password"
             placeholder="Mot de passe"
             required
             ref={registerPassword}
+            autoComplete="off"
           />
           <input type="submit" value="Valider l'inscription" />
         </form>
